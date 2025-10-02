@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Nayara Matos - Gerente de Projetos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        // Configuração do Tailwind CSS para habilitar o dark mode via classe
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Animação suave para troca de cores */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+    <!-- Script para aplicar o dark mode antes do carregamento da página, evitando flash -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+    <!-- Cabeçalho -->
+    <header
+        class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm dark:bg-gray-800/80 dark:border-b dark:border-gray-700">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold text-gray-900 dark:text-white">Nayara Matos</h1>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Gerente de Projetos</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#contato"
+                    class="hidden md:inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors">Contato</a>
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="text-center py-20 px-6 bg-white dark:bg-gray-800">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Conectando Estratégia,
+                Criatividade e Tecnologia</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300 mb-8">Com foco em metodologias ágeis e
+                comunicação transparente, gerencio projetos do início ao fim, transformando ideias em resultados de alto
+                impacto.</p>
+            <a href="#projetos"
+                class="bg-gray-800 text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-900 dark:bg-blue-600 dark:hover:bg-blue-700 transition-colors">Ver
+                Projetos</a>
+        </section>
+
+        <!-- Seção Workflow -->
+        <section id="workflow" class="py-20 px-6">
+            <div class="container mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Meu Processo de Trabalho
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+                    <!-- Etapa 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">1. Imersão e Briefing</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Entendimento profundo das suas necessidades
+                            e objetivos para definir um escopo claro e alinhado.</p>
+                    </div>
+
+                    <!-- Etapa 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 dark:bg-green-900/50 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 6.75V15m6-6v8.25m.503-6.498l4.47-4.47a.75.75 0 00-1.06-1.06l-4.47 4.47a.75.75 0 001.06 1.06z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 18.75a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">2. Planejamento Estratégico
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Criação de um plano de ação detalhado, com
+                            cronograma, metas e recursos definidos para garantir o sucesso.</p>
+                    </div>
+
+                    <!-- Etapa 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-purple-100 dark:bg-purple-900/50 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l.5 1.5m-5-3l2-3m2 3l-2-3m2 3l.5 1.5m-5-3l-2-3m2 3l2 3m0 0l-2-3m2 3l2 3M3.75 9h16.5" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">3. Execução e Gestão</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Gerenciamento ativo do projeto, com
+                            comunicação constante e controle de qualidade em todas as etapas.</p>
+                    </div>
+
+                    <!-- Etapa 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-red-100 dark:bg-red-900/50 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-red-600 dark:text-red-400" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a17.96 17.96 0 00-12.122-12.122m12.122 12.122L19.5 19.5M4.5 4.5l2.25 2.25" />
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-gray-900 dark:text-white">4. Entrega e Análise</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Entrega do projeto finalizado e análise dos
+                            resultados com base nos KPIs definidos para garantir o valor gerado.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section id="projetos" class="py-20 px-6 bg-white dark:bg-gray-800">
+            <div class="container mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Projetos em Destaque</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Projeto Celebra -->
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                        <div class="p-6">
+                            <span class="text-sm text-red-600 dark:text-red-400 font-semibold">Desenvolvimento Web |
+                                UI/UX</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Website - Celebra
+                                Decorações</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Criação de um site institucional
+                                completo, com foco em navegação intuitiva, design elegante e responsivo, apresentação de pacotes e galeria filtrável para exibir o portfólio da empresa.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4"><strong>Habilidades:</strong>
+                                Gestão de Projetos, HTML, Tailwind CSS, JavaScript, UX/UI</p>
+                            <a href="https://naymatos.github.io/site-celebra-decoracoes/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline">
+                                Ver Projeto &rarr;
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Projeto Estratégia -->
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                        <div class="p-6">
+                            <span class="text-sm text-teal-600 dark:text-teal-400 font-semibold">Consultoria |
+                                Estratégia Digital</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Planejamento de Marca
+                                Digital</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Desenvolvimento de metodologia para
+                                construção de presença de marca, aplicando a análise de mercado e público-alvo até o plano de
+                                conteúdo e definição de KPIs, visando a melhoria contínua.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Análise de
+                                Concorrência, Plano de Conteúdo, KPIs, Branding de Marca</p>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Experiência Corporativa -->
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                        <div class="p-6">
+                            <span class="text-sm text-blue-600 dark:text-blue-400 font-semibold">Gestão de Contas |
+                                Agência</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Atendimento a Marcas
+                                Globais</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Atuação no gerenciamento de
+                                projetos publicitários plurais para clientes de grande porte, sendo o ponto focal de comunicação
+                                entre equipes multidisciplinares, desenvolvendo a análise e a aplicabilidade dos processos de governança.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Ferramentas:</strong> JIRA,
+                                FIDO, Plataformas de IA, Metodologias Ágeis</p>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Promoções TOP -->
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                        <div class="p-6">
+                            <span class="text-sm text-green-600 dark:text-green-400 font-semibold">Freelancer |
+                                Branding</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Branding e ID Visual -
+                                Promoções TOP</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Liderei o projeto de criação da
+                                marca, desde a concepção estratégica até a gestão do cronograma, escopo e entrega final
+                                da identidade visual.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Gestão de
+                                Escopo, Planejamento, Design, Kanban</p>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Matos Barbearia -->
+                    <div
+                        class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                        <div class="p-6">
+                            <span class="text-sm text-purple-600 dark:text-purple-400 font-semibold">Freelancer |
+                                Branding</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Branding - Matos Barbearia
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Atuei como gerente de projeto,
+                                traduzindo as necessidades do cliente, planejando e executando todo o projeto de
+                                identidade visual.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Gestão de
+                                Prazos, Gestão de Feedback, Design, SCRUM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="bg-gray-900 dark:bg-black py-20 px-6 text-white">
+            <div class="container mx-auto text-center max-w-3xl">
+                <h3 class="text-3xl font-bold mb-4">Vamos nos Conectar?</h3>
+                <p class="mb-8 text-gray-300 dark:text-gray-400">Estou sempre aberta a novas oportunidades, colaborações
+                    e desafios. Se você tem um projeto em mente ou gostaria de saber mais sobre meu trabalho, entre em
+                    contato.</p>
+                <a href="mailto:nayarasmatos@gmail.com"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors inline-block mb-4">nayarasmatos@gmail.com</a>
+                <p class="text-gray-400">ou me encontre no</p>
+                <a href="https://www.linkedin.com/in/nayarasilvamatos/" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:underline">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-white dark:bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-sm text-gray-600 dark:text-gray-400">
+            <p>&copy; <span id="ano-atual">2025</span> Nayara Matos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script do Dark Mode -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Função para alternar o ícone
+        const toggleIcon = () => {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+        };
+
+        // Checa o tema atual e define o ícone correto no carregamento
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            toggleIcon();
+
+            // se o tema estiver salvo no localStorage
+            if (localStorage.getItem('theme')) {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                }
+                // se o tema NÃO estiver salvo no localStorage
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+        });
+    </script>
+
+    <!-- Script para atualizar o ano automaticamente -->
+    <script>
+        // Esta linha encontra o elemento com o id 'ano-atual' e atualiza seu conteúdo
+        // com o ano atual, obtido através do objeto Date do JavaScript.
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
