@@ -41,10 +41,12 @@
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
 
     <script>
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
+        // Carrega sempre no modo noturno por padrão
+        if (localStorage.getItem('theme') !== 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
         } else {
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove('dark');
         }
     </script>
 
@@ -124,75 +126,75 @@
             </div>
         </section>
 
-        <!-- Seção de Projetos -->
+        <!-- Seção de Projetos Atualizada -->
         <section id="projetos" class="py-20 px-6 bg-white dark:bg-gray-800">
             <div class="container mx-auto">
-                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Projetos em Destaque</h3>
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Projetos e Experiências Profissionais</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <!-- 1. Landing Page - Decor & Festas -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 1. Landing Page - Decor & Festas (ROSA) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-pink-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-red-600 dark:text-red-400 font-semibold">Desenvolvimento Web | UI/UX</span>
+                            <span class="text-sm text-pink-600 dark:text-pink-500 font-semibold uppercase tracking-widest">Estratégia Criativa | Gestão de Design</span>
                             <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Landing Page - Decor & Festas</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Projeto de rebranding e criação de uma Landing Page moderna para o setor de eventos. Foco em design responsivo, modo escuro nativo e galeria dinâmica de portfólio.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4"><strong>Habilidades:</strong> Adobe XD, Illustrator, Rebranding, HTML, Tailwind CSS, Gestão de Projeto</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Coordenei a renovação estratégica da marca e o desenvolvimento de uma página focada em converter visitantes em clientes. Utilizei o quadro Kanban para controlar as etapas de criação, garantindo entregas de alta qualidade alinhadas aos objetivos de negócio.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4">Habilidades: Adobe XD, Illustrator, Kanban (Trello e Notion), Estratégia de Marca, Design de Interface.</p>
                             <a href="https://naymatos.github.io/site-decor-festas/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline">
                                 Ver Projeto &rarr;
                             </a>
                         </div>
                     </div>
 
-                    <!-- 2. Coca-Cola (Hogarth) -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 2. Coca-Cola (Hogarth) (VERMELHO) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-red-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-red-600 dark:text-red-400 font-semibold">Gestão de Projetos | Hogarth</span>
-                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Conta Coca-Cola</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Gerenciamento ponta a ponta de projetos publicitários, garantindo a transição fluida do briefing à entrega final. Ponto focal entre design, tecnologia e mídia.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4"><strong>Habilidades:</strong> Adobe Creative Cloud (Photoshop/Illustrator), Gestão Ágil, WPP Open (IA), Cronogramas</p>
+                            <span class="text-sm text-red-600 dark:text-red-400 font-semibold uppercase tracking-widest">Gerenciamento de Projetos | Coca-Cola Global</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Hogarth (Conta Coca-Cola)</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Gerenciei projetos publicitários complexos seguindo a metodologia ágil Scrum. Atuei como elo principal entre equipes diversas e o cliente, utilizando o Jira e Notion para eliminar gargalos e monitorar cronogramas globais através da plataforma WPP Open com IA.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4">Habilidades: Metodologias Ágeis (Scrum), Jira, Notion, Gestão de Stakeholders, Adobe Creative Cloud.</p>
                         </div>
                     </div>
                     
-                    <!-- 3. Taskflow -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 3. Taskflow (VERDE) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-green-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-green-600 dark:text-green-400 font-semibold">Desenvolvimento Web | Gestão de Tarefas</span>
-                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Taskflow - Gerenciador de Tarefas</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Gerenciador de tarefas Kanban colaborativo com sincronização em tempo real. Construído com HTML, Tailwind CSS e Firebase.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4"><strong>Habilidades:</strong> Adobe XD (UI Design), Gestão de Projetos, JavaScript, Tailwind CSS, Firebase</p>
+                            <span class="text-sm text-green-600 dark:text-green-400 font-semibold uppercase tracking-widest">Gestão de Produto | Desenvolvimento SaaS</span>
+                            <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Taskflow - Gestão de Tarefas</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Idealizei e gerenciei o desenvolvimento de um software de produtividade colaborativa. Implementei a lista de prioridades (backlog) e a escolha de funções baseada nas necessidades do usuário, com atualização de dados em tempo real.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500 mb-4">Habilidades: Pensamento de Produto, Kanban (Notion), Adobe XD (UI Design), Documentação Técnica.</p>
                             <a href="https://site-taskflow.web.app/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline">
                                 Ver Projeto &rarr;
                             </a>
                         </div>
                     </div>
 
-                    <!-- 4. Planejamento de Marca Digital -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 4. Planejamento de Marca Digital (TEAL) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-teal-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-teal-600 dark:text-teal-400 font-semibold">Consultoria | Estratégia Digital</span>
+                            <span class="text-sm text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-widest">Consultoria Estratégica | Inteligência de Negócios</span>
                             <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Planejamento de Marca Digital</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Desenvolvimento de metodologia para construção de presença de marca, aplicando análise de mercado e definição de KPIs.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Adobe InDesign, Illustrator, Análise de Concorrência, KPIs, Branding</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Liderei a consultoria para construção de presença digital. Defini e acompanhei indicadores de desempenho (KPIs) através de análise de mercado, criando guias de marca escaláveis e documentação estratégica detalhada.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500">Habilidades: Adobe InDesign, Inteligência de Mercado, Definição de KPIs, Documentação de Branding.</p>
                         </div>
                     </div>
 
-                    <!-- 5. Promoções TOP -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 5. Promoções TOP (AZUL) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-blue-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-blue-600 dark:text-blue-400 font-semibold">Gestão Freelancer | Branding</span>
+                            <span class="text-sm text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-widest">Liderança de Projeto | Identidade Visual</span>
                             <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Promoções TOP</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Liderança do projeto de criação da marca do zero. Atuação na concepção estratégica, briefing, discovery e gestão do cronograma de lançamento visual.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Adobe Illustrator, Photoshop, Gestão de Escopo, Identidade Visual</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Gerenciei o projeto de marca de ponta a ponta, desde a fase de descoberta estratégica até o lançamento visual. Coordenei prazos e expectativas, garantindo que o posicionamento estivesse totalmente alinhado aos planos de negócio do cliente.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500">Habilidades: Gestão do Ciclo de Vida do Projeto, Adobe Illustrator, Photoshop, Gestão de Escopo.</p>
                         </div>
                     </div>
 
-                    <!-- 6. Matos Barbearia -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 dark:border dark:border-gray-700">
+                    <!-- 6. Matos Barbearia (LARANJA) -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 border-l-4 border-l-orange-600 dark:border-y dark:border-r dark:border-gray-700">
                         <div class="p-6">
-                            <span class="text-sm text-orange-600 dark:text-orange-400 font-semibold">Gestão Freelancer | Branding</span>
+                            <span class="text-sm text-orange-600 dark:text-orange-400 font-semibold uppercase tracking-widest">Gestão de Projetos | Branding Freelance</span>
                             <h4 class="text-xl font-bold my-2 text-gray-900 dark:text-white">Matos Barbearia</h4>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Responsável direta pelo relacionamento com o cliente e tradução de necessidades em um plano de ação claro. Gestão autônoma de recursos e fluxo de trabalho.</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500"><strong>Habilidades:</strong> Adobe Photoshop, Illustrator, Planejamento e Execução, Gestão de Prazos</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Responsável pela gestão autônoma do projeto de marca. Traduzi as necessidades do cliente em um plano de ação claro, gerenciando recursos e garantindo a entrega dos marcos principais (milestones) com alta qualidade.</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-500">Habilidades: Adobe Suite, Planejamento e Execução, Gestão de Prazos, Relacionamento com Stakeholders.</p>
                         </div>
                     </div>
 
@@ -227,7 +229,8 @@
             themeToggleLightIcon.classList.toggle('hidden');
         };
 
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Estado inicial do botão de tema baseado na classe dark
+        if (document.documentElement.classList.contains('dark')) {
             themeToggleLightIcon.classList.remove('hidden');
         } else {
             themeToggleDarkIcon.classList.remove('hidden');
@@ -235,12 +238,12 @@
 
         themeToggleBtn.addEventListener('click', () => {
             toggleIcon();
-            if (localStorage.getItem('theme') === 'light' || !localStorage.getItem('theme') && !document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
+            if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
                 localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
             }
         });
 
